@@ -684,7 +684,7 @@
     // If there are fewer values, the last one applies to the remaining hotends.
     #define DEFAULT_Kp_LIST {  22.20,  22.20 }
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
+    #define DEFAULT_Kd_LIST { 114.00, 114.00 }// P21.89 I1.97 D60.78
   #else
     #define DEFAULT_Kp  25.00
     #define DEFAULT_Ki  3.50
