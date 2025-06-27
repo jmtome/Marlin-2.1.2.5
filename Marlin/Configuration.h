@@ -3408,3 +3408,7 @@
 
 // Disable servo with M282 to reduce power consumption, noise, and heat when not in use
 //#define SERVO_DETACH_GCODE
+#undef SERVO2_PIN          // only if it exists
+#define NUM_SERVOS 0   
+
+// #define FAN1_PIN 5  // Auto fan pin, overriding default RAMPS assignment
