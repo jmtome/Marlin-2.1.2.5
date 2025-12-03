@@ -3414,4 +3414,8 @@
 #undef SERVO2_PIN          // only if it exists
 #define NUM_SERVOS 0   
 
+// Disable beeper
+#undef BEEPER_PIN
+#define BEEPER_PIN -1
+
 // #define FAN1_PIN 5  // Auto fan pin, overriding default RAMPS assignment
