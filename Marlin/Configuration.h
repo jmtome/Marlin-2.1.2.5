@@ -1218,7 +1218,9 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 3000 }  // X, Y, Z, E
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 1200 }  // X, Y, Z, E
+                                                  // E-axis: 1200 mm/s² max for A4988 + Prusa hobbed gear (original: 3000)
+                                                  // A4988 drivers are less capable than TMC drivers, so lower limits needed
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1234,7 +1236,9 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          1500     // M204 P
-#define DEFAULT_RETRACT_ACCELERATION  3000     // M204 R
+#define DEFAULT_RETRACT_ACCELERATION  600      // M204 R (reduced from 3000 for A4988 drivers + Prusa hobbed gear)
+                                                  // Original Prusa default: 3000, but A4988 drivers are less capable
+                                                  // Recommended range: 500-800 for A4988, 300-500 if still grinding
 #define DEFAULT_TRAVEL_ACCELERATION   2000     // M204 T
 
 /**
